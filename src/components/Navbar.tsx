@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useLanguage } from "../i18n/LanguageContext.tsx";
 import { LanguageSwitcher } from "./ui/LanguageSwitcher.tsx";
@@ -9,6 +9,7 @@ const Navbar = () => {
   const { translations } = useLanguage();
 
   const navLinks = [
+    { href: "/", label: translations.nav.home },
     { href: "#about", label: translations.nav.about },
     { href: "#skills", label: translations.nav.skills },
     { href: "#experience", label: "Experience" },

@@ -1,35 +1,36 @@
-import { useRef } from "react";
+// @ts-ignore: Unreachable code error
+import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { useLanguage } from "../i18n/LanguageContext.tsx";
 
 const getEducation = (translations: any) => [
   {
     id: 1,
-    period: "2023 - 2025",
-    degree: "Master, Full Lifecycle API",
-    institution: "ESTIAM, Paris",
-    description: "Formation approfondie en développement et gestion d'API"
+    period: translations.education.items.engineering.period,
+    degree: translations.education.items.engineering.degree,
+    institution: translations.education.items.engineering.institution,
+    description: translations.education.items.engineering.description
   },
   {
     id: 2,
-    period: "2020 - 2023",
-    degree: "Bachelor, DevOps",
-    institution: "EPSI, Paris",
-    description: "Formation en développement et opérations"
+    period: translations.education.items.bachelor.period,
+    degree: translations.education.items.bachelor.degree,
+    institution: translations.education.items.bachelor.institution,
+    description: translations.education.items.bachelor.description
   },
   {
     id: 3,
-    period: "2018 - 2020",
-    degree: "DUT, Génie Civil",
-    institution: "École Supérieure Polytechnique, Dakar",
-    description: "Formation en génie civil"
+    period: translations.education.items.dut.period,
+    degree: translations.education.items.dut.degree,
+    institution: translations.education.items.dut.institution,
+    description: translations.education.items.dut.description
   },
   {
     id: 4,
-    period: "2017 - 2018",
-    degree: "Baccalauréat S2",
-    institution: "Lycée Saldia, Dakar",
-    description: "Mention Assez-bien"
+    period: translations.education.items.bac.period,
+    degree: translations.education.items.bac.degree,
+    institution: translations.education.items.bac.institution,
+    description: translations.education.items.bac.description
   }
 ];
 

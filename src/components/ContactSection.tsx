@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { apiRequest } from "../lib/queryClient.ts";
 import { useToast } from "../hooks/use-toast.ts";
@@ -14,9 +14,19 @@ const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    subject: "",
+    subject: "project", // Valeur par défaut
     message: ""
   });
+  
+  // Options de sujet
+  const subjectOptions = [
+    { value: 'project', label: 'Proposition de projet' },
+    { value: 'job', label: 'Opportunité d\'emploi' },
+    { value: 'collaboration', label: 'Proposition de collaboration' },
+    { value: 'question', label: 'Question technique' },
+    { value: 'feedback', label: 'Retour sur le portfolio' },
+    { value: 'autre', label: 'Autre sujet' }
+  ];
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const containerVariants = {
@@ -51,6 +61,7 @@ const ContactSection = () => {
     }
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -62,7 +73,7 @@ const ContactSection = () => {
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
@@ -72,7 +83,8 @@ const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
-      await apiRequest("POST", "/api/contact", formData);
+      // Utiliser l'endpoint du serveur Express
+      await apiRequest("POST", "http://localhost:5000/api/send-email", formData);
       toast({
         title: translations.contact.toast.success.title,
         description: translations.contact.toast.success.description,
@@ -218,16 +230,20 @@ const ContactSection = () => {
                 
                 <div>
                   <label htmlFor="subject" className="block text-dark-800 dark:text-dark-100 font-medium mb-2">{translations.contact.form.subject.label}</label>
-                  <input 
-                    type="text" 
+                  <select 
                     id="subject" 
                     name="subject" 
                     value={formData.subject}
                     onChange={handleChange}
-                    placeholder={translations.contact.form.subject.placeholder}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-dark-600 bg-white dark:bg-dark-800 text-dark-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
                     required
-                  />
+                  >
+                    {subjectOptions.map((option) => (
+                      <option key={option.value} value={option.value}>
+                        {option.label}
+                      </option>
+                    ))}
+                  </select>
                 </div>
                 
                 <div>

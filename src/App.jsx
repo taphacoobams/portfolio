@@ -43,8 +43,8 @@ function App() {
               <AboutSection />
               <SkillsSection />
               <ExperienceSection />
-              <ProjectsSection />
               <EducationSection />
+              <ProjectsSection />
               <GameSection />
               <ContactSection />
             </main>

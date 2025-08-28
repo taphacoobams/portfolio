@@ -1,90 +1,46 @@
-import { useRef } from "react";
+// @ts-ignore: Unreachable code error
+import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { useLanguage } from "../i18n/LanguageContext.tsx";
 
 const getProjects = (translations: any) => [
   {
     id: 1,
-    title: translations.projects.items.faqApp.title,
-    description: translations.projects.items.faqApp.description,
-    image: "FAQ App",
-    skills: ["React", "TypeScript", "Node.js", "MongoDB"],
-    demoLink: "#",
-    codeLink: "#"
+    title: translations.projects.items.aztech.title,
+    description: translations.projects.items.aztech.description,
+    image: "AZTECH",
+    skills: ["React", "Tailwind CSS", "Framer Motion", "EmailJS"],
+    demoLink: "https://aztechsn.vercel.app",
+    codeLink: "https://github.com/taphacoobams/aztech"
   },
   {
     id: 2,
-    title: translations.projects.items.boardGame.title,
-    description: translations.projects.items.boardGame.description,
-    image: "Board Game",
-    skills: ["Java", "React Native", "Node.js", "SQLite"],
-    demoLink: "#",
-    codeLink: "#"
-  },
+    title: translations.projects.items.fcom.title,
+    description: translations.projects.items.fcom.description,
+    image: "FCOM",
+    skills: ["React", "Tailwind CSS", "Framer Motion", "React Router", "AOS"],
+    demoLink: "https://f-com-website.vercel.app",
+    codeLink: "https://github.com/taphacoobams/f-com_website"
+  }
+  ,
   {
     id: 3,
-    title: translations.projects.items.maisonSaba.title,
-    description: translations.projects.items.maisonSaba.description,
-    image: "Maison Saba",
-    skills: ["Next.js", "React", "Tailwind CSS", "Stripe", "MongoDB"],
-    demoLink: "#",
-    codeLink: "#"
+    title: translations.projects.items.socabeg.title,
+    description: translations.projects.items.socabeg.description,
+    image: "SOCABEG",
+    skills: ["React", "Tailwind CSS", "Framer Motion", "React Router", "AOS"],
+    demoLink: "https://socabeg-first.vercel.app/",
+    codeLink: "https://github.com/taphacoobams/socabeg-first"
   },
   {
     id: 4,
-    title: translations.projects.items.stockManager.title,
-    description: translations.projects.items.stockManager.description,
-    image: "Stock Manager",
-    skills: ["React", "Node.js", "Express", "Django"],
-    demoLink: "#",
-    codeLink: "#"
-  },
-  {
-    id: 5,
-    title: translations.projects.items.cvManager.title,
-    description: translations.projects.items.cvManager.description,
-    image: "CV Manager",
-    skills: ["React", "Firebase", "MongoDB", "Node.js"],
-    demoLink: "#",
-    codeLink: "#"
-  },
-  {
-    id: 6,
-    title: translations.projects.items.contactsManager.title,
-    description: translations.projects.items.contactsManager.description,
-    image: "Contacts Manager",
-    skills: ["React", "Supabase", "Django REST"],
-    demoLink: "#",
-    codeLink: "#"
-  },
-  {
-    id: 7,
-    title: "AZTECH",
-    description: "Site one-page développé pour une entreprise de second œuvre, avec React.js, Tailwind CSS, animations Framer Motion et formulaire de contact EmailJS.",
-    image: "AZTECH",
-    skills: ["React", "Tailwind CSS", "Framer Motion", "EmailJS"],
-    demoLink: "https://aztechsn.vercel.app", // remplace si tu as une autre URL
-    codeLink: "#" // ou lien GitHub si tu veux le mettre public
-  },
-  {
-    id: 8,
-    title: "F-COM",
-    description: "Site vitrine réalisé pour une entreprise connectée. Design épuré, animations fluides, galerie de réalisations.",
-    image: "FCOM",
-    skills: ["React", "Tailwind CSS", "Framer Motion", "React Router", "AOS"],
-    demoLink: "https://f-com-website.vercel.app", // remplace si différent
-    codeLink: "#" // idem si tu veux mettre le repo
-  }  
-  ,
-  {
-    id: 8,
-    title: "SOCABEG",
-    description: "Refonte du site corporatif pour une entreprise de BTP et d'immobilier. Design épuré, animations fluides.",
-    image: "SOCABEG",
-    skills: ["React", "Tailwind CSS", "Framer Motion", "React Router", "AOS"],
-    demoLink: "", // remplace si différent
-    codeLink: "#" // idem si tu veux mettre le repo
-  }  
+    title: translations.projects.items.khalilCollection.title,
+    description: translations.projects.items.khalilCollection.description,
+    image: "Khalil Collection",
+    skills: ["React", "Node.js", "Express", "Tailwind CSS", "Framer Motion"],
+    demoLink: "https://khalil-collection.vercel.app/",
+    codeLink: "https://github.com/taphacoobams/mode-project"
+  }
 ];
 
 const ProjectsSection = () => {

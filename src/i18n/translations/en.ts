@@ -89,12 +89,40 @@ export const en = {
     present: "Present",
     roles: {
       apprenticeIT: "Junior Integration Engineer",
-      apprenticeTech: "Web Developer"
+      apprenticeTech: "Web Developer",
+      webDev: "Web Developer Intern",
+      mobileDev: "Mobile Developer"
     },
     descriptions: {
       apprenticeIT: "API development and integration focusing on Mule 4. Unit testing with MUnit, API documentation, Mule 4 custom policy development, RAML design, and Git versioning.",
-      apprenticeTech: "Development of a FAQ application for learners and instructors. Built the architecture and interfaces, created the database."
+      apprenticeTech: "Development of a FAQ application for learners and instructors. Built the architecture and interfaces, created the database.",
+      webDev: "Creation of web extensions for educational tools. Development of Turtleuitv with Python graphical interface. Integration of Pythontutor and Docker containerization of JupyterHub.",
+      mobileDev: "Development of a checkers-like board game on Google Play Store. Initially developed for Android with Java and Eclipse, currently being redeveloped with React and Node.js for iOS and Android."
     },
+    skills: {
+      projectManagement: "Project Management",
+      networkSecurity: "Network Security",
+      fullStack: "Full Stack Development",
+      sql: "SQL",
+      dbAdmin: "Database Administration",
+      automation: "Automation",
+      html: "HTML5",
+      python: "Python",
+      javascript: "JavaScript",
+      paperjs: "Paper.js",
+      java: "Java",
+      reactjs: "React.js",
+      nodejs: "Node.js",
+      androidStudio: "Android Studio",
+      docker: "Docker",
+      git: "Git",
+      agile: "Agile Methodology",
+      teamwork: "Teamwork",
+      communication: "Communication",
+      problemSolving: "Problem Solving",
+      adaptability: "Adaptability",
+      creativity: "Creativity"
+    }
   },
   about: {
     title: "About Me",
@@ -156,7 +184,15 @@ export const en = {
       fcom: {
         title: "F-COM",
         description: "Showcase website designed for a company offering smart solutions. Includes a filterable project gallery, training registration form, legal pages, and smooth animations."
-      }      
+      },
+      khalilCollection: {
+        title: "Khalil Collection",
+        description: "E-commerce site for the African fashion brand Khalil Collection, featuring custom-made creations and unique pieces. The project combines a React frontend with a Node.js backend for a complete user experience."
+      },
+      socabeg: {
+        title: "SOCABEG",
+        description: "Redesign of a corporate website for a construction and real estate company. Clean design, smooth animations, and responsive layout."
+      }
     }
   },
   education: {

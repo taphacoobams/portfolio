@@ -125,6 +125,15 @@ export const projects = [
     skills: ["React", "Node.js", "MongoDB", "Express"],
     demoLink: "#",
     codeLink: "#"
+  },
+  {
+    id: 2,
+    title: "Khalil Collection",
+    description: "Site e-commerce pour la marque de mode africaine Khalil Collection, présentant des créations sur mesure et des pièces uniques. Le projet combine un frontend React avec un backend Node.js pour offrir une expérience utilisateur complète.",
+    image: "Khalil-Collection",
+    skills: ["React", "Node.js", "Express", "Tailwind CSS", "Framer Motion"],
+    demoLink: "#",
+    codeLink: "#"
   }
   // Vous pouvez ajouter d'autres projets ici
 ];

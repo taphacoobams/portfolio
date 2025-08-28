@@ -178,12 +178,20 @@ export const fr = {
         description: "Application full-stack utilisant React pour l'interface et Supabase ou Django REST pour la base de données et les API, offrant la création, organisation et recherche de contacts professionnels ou personnels."
       },
       aztech: {
-        title: "Azur Technologie",
+        title: "AZTECH",
         description: "Site one-page développé pour une entreprise de second œuvre. Conception avec React.js, Tailwind CSS, animations Framer Motion et formulaire de contact EmailJS."
       },
       fcom: {
         title: "F-COM",
-        description: "Site vitrine conçu pour une entreprise de solutions connectées. Inclut une galerie de réalisations filtrables, formulaire d’inscription à la formation, pages légales, et animations interactives."
+        description: "Site vitrine conçu pour une entreprise de solutions connectées. Inclut une galerie de réalisations filtrables, formulaire d'inscription à la formation, pages légales, et animations interactives."
+      },
+      khalilCollection: {
+        title: "Khalil Collection",
+        description: "Site e-commerce pour la marque de mode africaine Khalil Collection, présentant des créations sur mesure et des pièces uniques. Le projet combine un frontend React avec un backend Node.js pour offrir une expérience utilisateur complète."
+      },
+      socabeg: {
+        title: "SOCABEG",
+        description: "Refonte du site corporatif pour une entreprise de BTP et d'immobilier. Design épuré, animations fluides et mise en page responsive."
       }
     }
   },
