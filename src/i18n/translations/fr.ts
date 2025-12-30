@@ -85,12 +85,13 @@ export const fr = {
   },
   about: {
     title: "À Propos de Moi",
-    description: "Un développeur Full Stack passionné avec une solide base en technologies frontend et backend. J'aime transformer des problèmes complexes en solutions simples, belles et intuitives.",
+    description: "Un ingénieur de données passionné avec une solide base en technologies de données et développement full stack. J'aime transformer des problèmes complexes en solutions simples, belles et intuitives.",
     yearsExperience: "Années",
-    passionate: "Étudiant en Master 2 en développement web, passionné par l'informatique. Curieux et autonome, j'aime relever des challenges et apprendre de nouvelles choses.",
-    currentStudy: "J'ai acquis des compétences solides en technologies web et en développement d'API, que je souhaite mettre à profit dans des projets ambitieux.",
+    passionate: "Étudiant en Master Data Engineering & Intelligence Artificielle, passionné par la valorisation des données et l'innovation. Curieux et autonome, j'aime relever des challenges et apprendre de nouvelles technologies.",
+    currentStudy: "J'ai acquis des compétences solides en développement d'API, ingénierie des données et développement full stack, que je souhaite mettre à profit dans des projets ambitieux. Je recherche une alternance à partir de janvier 2026 pour contribuer à des projets en Data Engineering et Intelligence Artificielle.",
     hobbies: "En dehors du code, je m'intéresse à la musique, au football, au cinéma et à la lecture.",
     languages: "Langues",
+    languageNames: "Français, Anglais, Wolof",
     downloadCV: "Télécharger CV"
   },
   skills: {
@@ -112,13 +113,15 @@ export const fr = {
       apprenticeIT: "Apprenti Ingénieur Intégrateur",
       apprenticeTech: "Développeur Web",
       webDev: "Stagiaire Développeur Web",
-      mobileDev: "Développeur Mobile"
+      mobileDev: "Développeur Mobile",
+      dataAnalyst: "Analyste de Données"
     },
     descriptions: {
       apprenticeIT: "Développement et intégration d'API avec Mule 4. Tests unitaires avec MUnit, documentation API, développement de politiques personnalisées Mule 4, conception RAML et versionnement Git.",
       apprenticeTech: "Développement d'une application FAQ pour apprenants et instructeurs. Construction de l'architecture et des interfaces, création de la base de données.",
-      webDev: "Création d'extensions web pour des outils éducatifs. Développement de Turtleuitv avec interface graphique Python. Intégration de Pythontutor et conteneurisation Docker de JupyterHub.",
-      mobileDev: "Développement d'un jeu de plateau type dames sur Google Play Store. Développé initialement pour Android avec Java et Eclipse, en cours de redéveloppement avec React et Node.js pour iOS et Android."
+      webDev: "Développement d'une application mobile FAQ avec React Native et Firebase. Création de l'interface utilisateur et implémentation des fonctionnalités interactives.",
+      mobileDev: "Développement d'un jeu de plateau type dames sur Google Play Store. Développé initialement pour Android avec Java et Eclipse, en cours de redéveloppement avec React et Node.js pour iOS et Android.",
+      dataAnalyst: "Projet d'analyse des ventes avec SQL et Power BI. Création de tableaux de bord interactifs pour visualiser les indicateurs de performance clés. Extraction, transformation et agrégation de données via SQL. Développement de visualisations avec Power BI et DAX."
     },
     skills: {
       projectManagement: "Gestion de Projet",
@@ -192,6 +195,14 @@ export const fr = {
       socabeg: {
         title: "SOCABEG",
         description: "Refonte du site corporatif pour une entreprise de BTP et d'immobilier. Design épuré, animations fluides et mise en page responsive."
+      },
+      salesAnalytics: {
+        title: "Analyse des Ventes",
+        description: "Projet personnel d'analyse de données de ventes développé en 2025. Utilisation de SQL pour l'extraction et la transformation des données, et Power BI pour la création de tableaux de bord interactifs permettant de visualiser les indicateurs de performance clés."
+      },
+      mlPrediction: {
+        title: "Prédiction de Churn Client",
+        description: "Projet personnel de machine learning développé en 2025. Utilisation de Python et Pandas pour le nettoyage et la préparation des données, et d'un modèle Random Forest pour prédire les départs clients avec visualisation des résultats."
       }
     }
   },
@@ -199,7 +210,13 @@ export const fr = {
     title: "Formation",
     subtitle: "Mon parcours académique et mes qualifications.",
     items: {
-      engineering: {
+      dataEngineering: {
+        period: "2025 - 2027",
+        degree: "Master, Data Engineering & IA",
+        institution: "ESGI, Paris",
+        description: "Spécialisation en ingénierie des données et intelligence artificielle"
+      },
+      apiMaster: {
         period: "2023 - 2025",
         degree: "Master, Full Lifecycle API",
         institution: "ESTIAM, Paris",
@@ -211,12 +228,6 @@ export const fr = {
         institution: "EPSI, Paris",
         description: "Formation en développement et opérations"
       },
-      dut: {
-        period: "2018 - 2020",
-        degree: "DUT, Génie Civil",
-        institution: "École Supérieure Polytechnique, Dakar",
-        description: "Formation en génie civil"
-      },
       bac: {
         period: "2017 - 2018",
         degree: "Baccalauréat S2",
@@ -225,6 +236,7 @@ export const fr = {
       }
     }
   },
+  // Section GitHub supprimée
   contact: {
     title: "Me Contacter",
     subtitle: "Vous avez un projet en tête ou vous voulez simplement dire bonjour ? N'hésitez pas à me contacter !",
@@ -233,7 +245,7 @@ export const fr = {
       description: "N'hésitez pas à me contacter via l'un de ces canaux. Je suis toujours ouvert à la discussion de nouveaux projets, d'opportunités ou de partenariats.",
       location: {
         title: "Localisation",
-        value: "Villejuif, 94800"
+        value: "Paris, 94800"
       },
       email: {
         title: "Email",
@@ -259,7 +271,15 @@ export const fr = {
       },
       subject: {
         label: "Sujet",
-        placeholder: "De quoi s'agit-il ?"
+        placeholder: "De quoi s'agit-il ?",
+        options: {
+          project: "Proposition de projet",
+          job: "Opportunité d'emploi",
+          collaboration: "Proposition de collaboration",
+          question: "Question technique",
+          feedback: "Retour sur le portfolio",
+          other: "Autre sujet"
+        }
       },
       message: {
         label: "Message",

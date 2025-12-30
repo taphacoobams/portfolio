@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "wouter";
+import { useLocation } from "wouter";
 
 interface LogoProps {
   className?: string;
@@ -13,13 +13,20 @@ export const Logo: React.FC<LogoProps> = ({ className = "", size = "md" }) => {
     lg: "w-10 h-10 text-lg",
   };
 
+  const [, navigate] = useLocation();
+  
+  const handleClick = () => {
+    navigate('/');
+  };
+  
   return (
-    <Link href="/">
-      <a href="/" className={`flex items-center gap-2 font-heading font-bold text-primary-600 dark:text-primary-500 ${className}`}>
-        <div className={`${sizeClasses[size]} rounded-md text-white flex items-center justify-center`}>
-        </div>
-        <span>Moustapha Sambe</span>
-      </a>
-    </Link>
+    <div 
+      onClick={handleClick}
+      className={`flex items-center gap-2 font-heading font-bold text-primary-600 dark:text-primary-500 ${className} cursor-pointer`}
+    >
+      <div className={`${sizeClasses[size]} rounded-md text-white flex items-center justify-center`}>
+      </div>
+      <span>Moustapha Sambe</span>
+    </div>
   );
 };

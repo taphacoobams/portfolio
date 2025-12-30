@@ -14,20 +14,17 @@ const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    subject: "project", // Valeur par défaut
+    subject: "project", // Valeur par défaut (project)
     message: ""
   });
   
-  // Options de sujet
-  const subjectOptions = [
-    { value: 'project', label: 'Proposition de projet' },
-    { value: 'job', label: 'Opportunité d\'emploi' },
-    { value: 'collaboration', label: 'Proposition de collaboration' },
-    { value: 'question', label: 'Question technique' },
-    { value: 'feedback', label: 'Retour sur le portfolio' },
-    { value: 'autre', label: 'Autre sujet' }
-  ];
+  // Options de sujet depuis les fichiers de traduction
+  const subjectOptions = Object.entries(translations.contact.form.subject.options).map(([value, label]) => ({
+    value,
+    label: label as string
+  }));
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -96,6 +93,13 @@ const ContactSection = () => {
         subject: "",
         message: ""
       });
+      // Afficher le message de confirmation
+      setSubmitSuccess(true);
+      
+      // Masquer le message après 5 secondes
+      setTimeout(() => {
+        setSubmitSuccess(false);
+      }, 5000);
     } catch (error) {
       toast({
         title: translations.contact.toast.error.title,
@@ -170,8 +174,8 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold mb-1">{translations.contact.info.phone.title}</h4>
-                    <a href="tel:+33758054947" className="opacity-90 hover:opacity-100 hover:underline transition-all duration-300">
-                      +33 7 58 05 49 47
+                    <a href="tel:+33753848157" className="opacity-90 hover:opacity-100 hover:underline transition-all duration-300">
+                      +33 7 53 84 81 57
                     </a>
                   </div>
                 </div>
@@ -260,7 +264,7 @@ const ContactSection = () => {
                   ></textarea>
                 </div>
                 
-                <div>
+                <div className="space-y-4">
                   <button 
                     type="submit" 
                     className="px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300 w-full md:w-auto disabled:opacity-50 disabled:cursor-not-allowed"
@@ -276,6 +280,16 @@ const ContactSection = () => {
                       </span>
                     ) : translations.contact.form.submit.label}
                   </button>
+                  
+                  {/* Message de confirmation */}
+                  {submitSuccess && (
+                    <div className="mt-4 p-3 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-lg flex items-center">
+                      <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                      </svg>
+                      <span>Message envoyé avec succès ! Nous vous répondrons bientôt.</span>
+                    </div>
+                  )}
                 </div>
               </form>
             </motion.div>

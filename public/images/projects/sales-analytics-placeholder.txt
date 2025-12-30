@@ -1,0 +1,8 @@
+Ce fichier est un placeholder pour l'image du projet "Analyse des Ventes".
+
+Veuillez ajouter une image nommée "sales-analytics.jpg" dans ce répertoire avec les spécifications suivantes :
+- Résolution recommandée : 1280x720px (ratio 16:9)
+- Format : JPG ou PNG
+- Taille maximale : 500KB
+
+L'image devrait représenter un tableau de bord d'analyse de ventes ou des visualisations de données pertinentes.

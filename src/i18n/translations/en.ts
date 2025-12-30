@@ -91,13 +91,15 @@ export const en = {
       apprenticeIT: "Junior Integration Engineer",
       apprenticeTech: "Web Developer",
       webDev: "Web Developer Intern",
-      mobileDev: "Mobile Developer"
+      mobileDev: "Mobile Developer",
+      dataAnalyst: "Data Analyst"
     },
     descriptions: {
       apprenticeIT: "API development and integration focusing on Mule 4. Unit testing with MUnit, API documentation, Mule 4 custom policy development, RAML design, and Git versioning.",
       apprenticeTech: "Development of a FAQ application for learners and instructors. Built the architecture and interfaces, created the database.",
-      webDev: "Creation of web extensions for educational tools. Development of Turtleuitv with Python graphical interface. Integration of Pythontutor and Docker containerization of JupyterHub.",
-      mobileDev: "Development of a checkers-like board game on Google Play Store. Initially developed for Android with Java and Eclipse, currently being redeveloped with React and Node.js for iOS and Android."
+      webDev: "Development of a mobile FAQ application with React Native and Firebase. Created UI/UX design and implemented interactive features.",
+      mobileDev: "Development of a checkers-like board game on Google Play Store. Initially developed for Android with Java and Eclipse, currently being redeveloped with React and Node.js for iOS and Android.",
+      dataAnalyst: "Sales analysis project using SQL and Power BI. Created interactive dashboards to visualize key performance indicators. Extracted, transformed and aggregated data using SQL. Developed visualizations with Power BI and DAX."
     },
     skills: {
       projectManagement: "Project Management",
@@ -126,12 +128,13 @@ export const en = {
   },
   about: {
     title: "About Me",
-    description: "A passionate Full Stack Developer with a strong foundation in both frontend and backend technologies. I love turning complex problems into simple, beautiful, and intuitive solutions.",
+    description: "A passionate Data Engineer with a strong foundation in both data technologies and full stack development. I love turning complex problems into simple, beautiful, and intuitive solutions.",
     yearsExperience: "Years",
-    passionate: "Master's student in web development, passionate about computer science. Curious and autonomous, I love taking on challenges and learning new things.",
-    currentStudy: "I have acquired solid skills in web technologies and API development, which I wish to put to use in ambitious projects.",
+    passionate: "Master's student in Data Engineering & AI, passionate about data valorization and innovation. Curious and autonomous, I love taking on challenges and learning new technologies.",
+    currentStudy: "I have acquired solid skills in API development, data engineering, and full stack development, which I wish to put to use in ambitious projects. Looking for an internship starting January 2026 to contribute to data engineering and AI projects.",
     hobbies: "Outside of coding, I'm interested in music, football, cinema, and reading.",
     languages: "Languages",
+    languageNames: "French, English, Wolof",
     downloadCV: "Download CV",
   },
   skills: {
@@ -192,6 +195,14 @@ export const en = {
       socabeg: {
         title: "SOCABEG",
         description: "Redesign of a corporate website for a construction and real estate company. Clean design, smooth animations, and responsive layout."
+      },
+      salesAnalytics: {
+        title: "Sales Analytics",
+        description: "Personal sales data analysis project developed in 2025. Using SQL for data extraction and transformation, and Power BI for creating interactive dashboards to visualize key performance indicators."
+      },
+      mlPrediction: {
+        title: "Customer Churn Prediction",
+        description: "Personal machine learning project developed in 2025. Using Python and Pandas for data cleaning and preparation, and a Random Forest model to predict customer churn with result visualization."
       }
     }
   },
@@ -199,7 +210,13 @@ export const en = {
     title: "Education",
     subtitle: "My academic journey and educational qualifications.",
     items: {
-      engineering: {
+      dataEngineering: {
+        period: "2025 - 2027",
+        degree: "Master's, Data Engineering & AI",
+        institution: "ESGI, Paris",
+        description: "Specialization in data engineering and artificial intelligence"
+      },
+      apiMaster: {
         period: "2023 - 2025",
         degree: "Master's, Full Lifecycle API",
         institution: "ESTIAM, Paris",
@@ -211,20 +228,15 @@ export const en = {
         institution: "EPSI, Paris",
         description: "Training in development and operations"
       },
-      dut: {
-        period: "2018 - 2020",
-        degree: "DUT, Civil Engineering",
-        institution: "École Supérieure Polytechnique, Dakar",
-        description: "Training in civil engineering"
-      },
       bac: {
         period: "2017 - 2018",
-        degree: "Scientific Baccalaureate",
+        degree: "Scientific Baccalaureate S2",
         institution: "Lycée Saldia, Dakar",
         description: "With honors"
       }
     }
   },
+  // GitHub section removed
   contact: {
     title: "Get In Touch",
     subtitle: "Have a project in mind or just want to say hello? Feel free to reach out!",
@@ -233,7 +245,7 @@ export const en = {
       description: "Feel free to contact me through any of these channels. I'm always open to discussing new projects, opportunities, or partnerships.",
       location: {
         title: "Location",
-        value: "Villejuif, 94800"
+        value: "Paris, 94800"
       },
       email: {
         title: "Email",
@@ -259,7 +271,15 @@ export const en = {
       },
       subject: {
         label: "Subject",
-        placeholder: "What's this about?"
+        placeholder: "What's this about?",
+        options: {
+          project: "Project Proposal",
+          job: "Job Opportunity",
+          collaboration: "Collaboration Proposal",
+          question: "Technical Question",
+          feedback: "Portfolio Feedback",
+          other: "Other Topic"
+        }
       },
       message: {
         label: "Message",

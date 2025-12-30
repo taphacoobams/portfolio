@@ -70,8 +70,9 @@ const AboutSection = () => {
           >
             <div className="relative">
               {/* Main Image Frame */}
-              <div className="w-full max-w-md mx-auto aspect-square rounded-2xl overflow-hidden border-8 border-white dark:border-dark-700 shadow-lg relative z-10 bg-gradient-to-br from-primary-50 to-gray-100 dark:from-dark-700 dark:to-dark-800">
-                {/* Profile Image Placeholder */}
+              <div className="w-full max-w-md mx-auto aspect-square rounded-2xl overflow-hidden border-8 border-white dark:border-dark-700 shadow-lg relative z-10 bg-gradient-to-br from-primary-50 to-gray-100 dark:from-dark-700 dark:to-dark-800 flex items-center justify-center">
+                {/* Profile Icon */}
+                <i className="fa-solid fa-user-circle text-[12rem] text-primary-500/70 dark:text-primary-500/50"></i>
               </div>
 
               {/* Decorative Elements */}
@@ -108,7 +109,7 @@ const AboutSection = () => {
                 transition={{ duration: 0.5, delay: 0.7, type: "spring" }}
               >
                 <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-primary-500 flex flex-col items-center justify-center text-white">
-                  <span className="text-lg md:text-xl font-bold">5+</span>
+                  <span className="text-lg md:text-xl font-bold">3+</span>
                   <span className="text-xs md:text-sm">
                     {translations.about.yearsExperience}
                   </span>
@@ -122,7 +123,7 @@ const AboutSection = () => {
             {/* Section Title */}
             <motion.div className="mb-8" variants={itemVariants}>
               <h2 className="text-3xl lg:text-4xl font-heading font-bold text-dark-900 dark:text-white mb-4">
-                About Me
+                {translations.about.title}
               </h2>
               <div className="w-20 h-1.5 bg-primary-500 rounded-full"></div>
             </motion.div>
@@ -148,11 +149,11 @@ const AboutSection = () => {
               >
                 <div className="flex items-center gap-3">
                   <i className="fa-solid fa-map-marker-alt text-primary-500 text-lg w-5"></i>
-                  <span>Villejuif, France</span>
+                  <span>Paris, France</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <i className="fa-solid fa-phone text-primary-500 text-lg w-5"></i>
-                  <span>07 58 05 49 47</span>
+                  <span>+33 7 53 84 81 57</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <i className="fa-solid fa-envelope text-primary-500 text-lg w-5"></i>
@@ -164,7 +165,7 @@ const AboutSection = () => {
                     <span className="font-medium mr-1">
                       {translations.about.languages}:
                     </span>
-                    French, English, Wolof
+                    {translations.about.languageNames}
                   </span>
                 </div>
               </motion.div>

@@ -16,7 +16,7 @@ export async function apiRequest(
     method,
     headers: data ? { "Content-Type": "application/json" } : {},
     body: data ? JSON.stringify(data) : undefined,
-    credentials: "include",
+    credentials: "omit", // Utiliser "omit" pour éviter le problème CORS
   });
 
   await throwIfResNotOk(res);
@@ -30,7 +30,7 @@ export const getQueryFn: <T>(options: {
   ({ on401: unauthorizedBehavior }) =>
   async ({ queryKey }) => {
     const res = await fetch(queryKey[0] as string, {
-      credentials: "include",
+      credentials: "same-origin",
     });
 
     if (unauthorizedBehavior === "returnNull" && res.status === 401) {

@@ -127,7 +127,7 @@ const HeroSection = () => {
               <a href="mailto:moustaphasambe719@gmail.com" className="text-dark-700 dark:text-dark-100 hover:text-primary-600 dark:hover:text-primary-500 transition-colors duration-300">
                 <i className="fa-solid fa-envelope text-2xl"></i>
               </a>
-              <a href="tel:0753848157" className="text-dark-700 dark:text-dark-100 hover:text-primary-600 dark:hover:text-primary-500 transition-colors duration-300">
+              <a href="tel:+33753848157" className="text-dark-700 dark:text-dark-100 hover:text-primary-600 dark:hover:text-primary-500 transition-colors duration-300">
                 <i className="fa-solid fa-phone text-2xl"></i>
               </a>
             </motion.div>

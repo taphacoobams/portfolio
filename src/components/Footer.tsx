@@ -11,9 +11,9 @@ const Footer = () => {
           {/* Logo & Tagline */}
           <div className="mb-6 md:mb-0 text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start gap-2 font-heading font-bold text-xl text-white mb-2">
-              <a href="#" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/30 flex items-center justify-center transition-colors duration-300">
+              <button className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/30 flex items-center justify-center transition-colors duration-300">
                 MS
-              </a>
+              </button>
               <span>Moustapha Sambe</span>
             </div>
             <p className="text-gray-400 max-w-md">
@@ -43,8 +43,8 @@ const Footer = () => {
               <h4 className="font-heading font-bold text-white mb-4">{translations.footer.contact.title}</h4>
               <ul className="space-y-2">
                 <li><a href="mailto:moustaphasambe719@gmail.com" className="text-gray-400 hover:text-primary-500 transition-colors duration-300">{translations.footer.contact.email}</a></li>
-                <li><a href="https://www.linkedin.com/in/mmsambe/" target="_blank" className="text-gray-400 hover:text-primary-500 transition-colors duration-300">LinkedIn</a></li>
-                <li><a href="https://github.com/taphacoobams" target="_blank" className="text-gray-400 hover:text-primary-500 transition-colors duration-300">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/mmsambe/" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-primary-500 transition-colors duration-300">LinkedIn</a></li>
+                <li><a href="https://github.com/taphacoobams" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-primary-500 transition-colors duration-300">GitHub</a></li>
               </ul>
             </div>
           </div>

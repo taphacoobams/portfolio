@@ -45,6 +45,7 @@ function App() {
               <ExperienceSection />
               <EducationSection />
               <ProjectsSection />
+              {/* GitHub Activity section removed */}
               <GameSection />
               <ContactSection />
             </main>

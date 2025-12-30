@@ -1,0 +1,8 @@
+Ce fichier est un placeholder pour l'image du projet "Prédiction de Churn Client".
+
+Veuillez ajouter une image nommée "ml-prediction.jpg" dans ce répertoire avec les spécifications suivantes :
+- Résolution recommandée : 1280x720px (ratio 16:9)
+- Format : JPG ou PNG
+- Taille maximale : 500KB
+
+L'image devrait représenter un modèle de machine learning, une visualisation de prédiction de churn client ou un graphique de résultats pertinent.

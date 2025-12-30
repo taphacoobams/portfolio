@@ -4,7 +4,7 @@
 export const aboutMe = {
   name: "Moustapha Sambe",
   title: "Développeur Full Stack & Intégrateur API",
-  location: "Villejuif, 94800",
+  location: "Paris, 94800",
   phone: "+33 7 53 84 81 57",
   email: "moustaphasambe719@gmail.com",
   languages: ["Français (Courant)", "Anglais (Professionnel)"],

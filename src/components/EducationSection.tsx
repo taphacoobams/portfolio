@@ -6,24 +6,24 @@ import { useLanguage } from "../i18n/LanguageContext.tsx";
 const getEducation = (translations: any) => [
   {
     id: 1,
-    period: translations.education.items.engineering.period,
-    degree: translations.education.items.engineering.degree,
-    institution: translations.education.items.engineering.institution,
-    description: translations.education.items.engineering.description
+    period: translations.education.items.dataEngineering.period,
+    degree: translations.education.items.dataEngineering.degree,
+    institution: translations.education.items.dataEngineering.institution,
+    description: translations.education.items.dataEngineering.description
   },
   {
     id: 2,
+    period: translations.education.items.apiMaster.period,
+    degree: translations.education.items.apiMaster.degree,
+    institution: translations.education.items.apiMaster.institution,
+    description: translations.education.items.apiMaster.description
+  },
+  {
+    id: 3,
     period: translations.education.items.bachelor.period,
     degree: translations.education.items.bachelor.degree,
     institution: translations.education.items.bachelor.institution,
     description: translations.education.items.bachelor.description
-  },
-  {
-    id: 3,
-    period: translations.education.items.dut.period,
-    degree: translations.education.items.dut.degree,
-    institution: translations.education.items.dut.institution,
-    description: translations.education.items.dut.description
   },
   {
     id: 4,

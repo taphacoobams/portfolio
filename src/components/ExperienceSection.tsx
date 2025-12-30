@@ -10,32 +10,49 @@ const ExperienceSection = () => {
   const experiences = [
     {
       id: 1,
+      period: "2025",
+      title: translations.experience.roles.dataAnalyst,
+      company: "Projet personnel",
+      description: translations.experience.descriptions.dataAnalyst,
+      skills: [
+        "SQL",
+        "Power BI",
+        "Data Analysis",
+        "Data Visualization",
+        "ETL",
+        "DAX"
+      ],
+      isList: true
+    },
+    {
+      id: 2,
       period: `2023 - 2025`,
       title: translations.experience.roles.apprenticeIT,
       company: "CAP4LAB, Paris",
       description: translations.experience.descriptions.apprenticeIT,
       skills: [
         "API Development",
+        "MuleSoft",
+        "RAML",
         "MUnit Testing",
         "API Documentation",
-        "Mule 4",
-        "RAML",
-        "Git"
+        "Git",
+        "CI/CD"
       ],
       isList: true
     },
     {
-      id: 2,
+      id: 3,
       period: "2023",
-      title: translations.experience.roles.apprenticeTech,
+      title: translations.experience.roles.webDev,
       company: "EPSI, Paris",
-      description: translations.experience.descriptions.apprenticeTech,
+      description: translations.experience.descriptions.webDev,
       skills: [
-        "Architecture Design",
-        "Database Design",
-        "Full Stack Development",
-        "React",
-        "Node.js"
+        "React Native",
+        "Firebase",
+        "Mobile Development",
+        "UI/UX Design",
+        "JavaScript"
       ],
       isList: true
     }

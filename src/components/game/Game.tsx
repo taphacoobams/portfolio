@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
 import Player from './Player.tsx';
 import Obstacle from './Obstacle.tsx';
 import GameOver from './GameOver.tsx';
@@ -47,7 +47,21 @@ const Game: React.FC = () => {
   const gameLoopRef = useRef<number>();
   const lastUpdateTimeRef = useRef<number>(0);
 
-  const startGame = () => {
+  // Calculate a random time interval between obstacles, decreasing as score increases
+  const getRandomObstacleInterval = useCallback((score: number) => {
+    const minInterval = Math.max(
+      MIN_OBSTACLE_INTERVAL, 
+      MIN_OBSTACLE_INTERVAL + (MAX_OBSTACLE_INTERVAL - MIN_OBSTACLE_INTERVAL) * (1 - score * OBSTACLE_INTERVAL_DECREASE_RATE)
+    );
+    const maxInterval = Math.max(
+      minInterval + 500,
+      MAX_OBSTACLE_INTERVAL * (1 - score * OBSTACLE_INTERVAL_DECREASE_RATE * 0.5)
+    );
+    
+    return Math.random() * (maxInterval - minInterval) + minInterval;
+  }, []);
+
+  const startGame = useCallback(() => {
     setGameState({
       isPlaying: true,
       score: 0,
@@ -60,23 +74,9 @@ const Game: React.FC = () => {
       nextObstacleTime: Date.now() + getRandomObstacleInterval(0),
     });
     lastUpdateTimeRef.current = Date.now();
-  };
+  }, [getRandomObstacleInterval]);
 
-  // Calculate a random time interval between obstacles, decreasing as score increases
-  const getRandomObstacleInterval = (score: number) => {
-    const minInterval = Math.max(
-      MIN_OBSTACLE_INTERVAL, 
-      MIN_OBSTACLE_INTERVAL + (MAX_OBSTACLE_INTERVAL - MIN_OBSTACLE_INTERVAL) * (1 - score * OBSTACLE_INTERVAL_DECREASE_RATE)
-    );
-    const maxInterval = Math.max(
-      minInterval + 500,
-      MAX_OBSTACLE_INTERVAL * (1 - score * OBSTACLE_INTERVAL_DECREASE_RATE * 0.5)
-    );
-    
-    return Math.random() * (maxInterval - minInterval) + minInterval;
-  };
-
-  const jump = () => {
+  const jump = useCallback(() => {
     const currentTime = Date.now();
     
     // Only allow jump if not already jumping or if jump cooldown has passed
@@ -88,7 +88,7 @@ const Game: React.FC = () => {
         lastJumpTime: currentTime,
       }));
     }
-  };
+  }, [gameState.isJumping, gameState.lastJumpTime]);
 
   useEffect(() => {
     const handleKeyPress = (e: KeyboardEvent) => {
@@ -104,9 +104,9 @@ const Game: React.FC = () => {
 
     window.addEventListener('keydown', handleKeyPress);
     return () => window.removeEventListener('keydown', handleKeyPress);
-  }, [gameState.isPlaying, gameState.isJumping, gameState.lastJumpTime]);
+  }, [gameState.isPlaying, gameState.isJumping, gameState.lastJumpTime, startGame, jump]);
 
-  const updateGameState = (prev: GameState): GameState => {
+  const updateGameState = useCallback((prev: GameState): GameState => {
     const currentTime = Date.now();
     const deltaTime = currentTime - lastUpdateTimeRef.current;
     lastUpdateTimeRef.current = currentTime;
@@ -203,7 +203,7 @@ const Game: React.FC = () => {
       score: newScore,
       nextObstacleTime,
     };
-  };
+  }, [getRandomObstacleInterval]);
 
   useEffect(() => {
     if (gameState.isPlaying) {
@@ -219,7 +219,7 @@ const Game: React.FC = () => {
         }
       };
     }
-  }, [gameState.isPlaying]);
+  }, [gameState.isPlaying, updateGameState]);
 
   return (
     <div className="relative w-full h-[500px] bg-gradient-to-b from-primary-100 to-primary-200 dark:from-dark-800 dark:to-dark-900 rounded-lg overflow-hidden shadow-xl">
